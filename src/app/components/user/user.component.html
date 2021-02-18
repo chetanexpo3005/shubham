@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-2">
+    <input type="number"  [(ngModel)]="number1" (ngModelChange)="add()"   class="form-control" />
+  </div>
+  <div class="col-md-2">
+    <input type="number"  [(ngModel)]="number2" (change)="add()" class="form-control" />
+  </div>
+  <div class="col-md-1">
+    <input type="button" value="Add" (mouseenter)="add()"  class="btn btn-success" />
+  </div>
+  <div class="col-md-2">
+    <input type="text"  [(ngModel)]="result" class="form-control" />
+    {{  number1   + number2}}
+  </div>
+</div>
