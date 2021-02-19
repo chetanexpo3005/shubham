@@ -1,0 +1,69 @@
+<div>Using varible name </div>
+<div class="row">
+  <div class="col-md-6">
+    <div *ngFor="let city of cityList">
+      {{city}}
+    </div>
+  </div>
+  <div class="col-md-6">
+    <ul>
+      <li *ngFor="let state of stateList">{{state}}</li>
+    </ul>
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col-md-6">
+    <table>
+      <tr>
+        <th>Sr</th>
+        <th>City</th>
+      </tr>
+      <tr *ngFor="let city of cityList;let i= index">
+        <td>{{i+1}}</td>
+        <td>{{city}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <select class="form-control">
+      <option *ngFor="let state of stateList">{{state}}</option>
+    </select>
+  </div>
+</div>
+
+<div>Using funciton to pass data to ngfor </div>
+
+<div class="row pt-3">
+  <div class="col-md-6">
+    <table>
+      <tr>
+        <th>Sr</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <th> </th>
+        <th>
+          <input type="text" [(ngModel)]="city" placeholder="City name"/>
+        </th>
+        <th>
+          <input type="button"   value="Add" (click)="addCity()" class="btn btn-success"/>
+        </th>
+      </tr>
+      <tr *ngFor="let city of getCityList();let i= index; let isFirst=first;let isLast=last">
+        <td>
+          <span *ngIf="isFirst == true">First</span>
+          <span *ngIf="isLast == true">Last</span>
+          {{i+1}} :-{{isFirst}}-{{isLast}}</td>
+        <td>{{city}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="remove()">remove</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <select class="form-control">
+      <option *ngFor="let state of stateList">{{state}}</option>
+    </select>
+  </div>
+</div>

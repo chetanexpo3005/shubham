@@ -7,6 +7,8 @@ import { UserComponent } from './components/user/user.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { NgifComponent } from './components/ngif/ngif.component';
 import { FormsModule } from '@angular/forms';
+import { NgforComponent } from './components/ngfor/ngfor.component';
+import { NgclassComponent } from './components/ngclass/ngclass.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     UserComponent,
     AdminComponent,
-    NgifComponent
+    NgifComponent,
+    NgforComponent,
+    NgclassComponent
   ],
   imports: [
     BrowserModule,
