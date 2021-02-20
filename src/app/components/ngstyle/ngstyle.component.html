@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-7">
+    <table class="table table-bordered">
+      <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Attendance %</th>
+      </tr>
+      <tr *ngFor="let student of studentList;let i= index">
+        <td>{{i+1}}</td>
+        <td   [ngClass]="student.Attendance ==100?'hundred':''">
+
+          {{student.Name}}</td>
+        <td>{{student.city}}</td>
+        <td>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+            [style.width.%]="student.Attendance"
+            >
+              <span  >{{student.Attendance}}% Complete</span>
+            </div>
+          </div>
+          </td>
+      </tr>
+    </table>
+  </div>
+</div>

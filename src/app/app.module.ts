@@ -9,6 +9,7 @@ import { NgifComponent } from './components/ngif/ngif.component';
 import { FormsModule } from '@angular/forms';
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { NgclassComponent } from './components/ngclass/ngclass.component';
+import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { NgclassComponent } from './components/ngclass/ngclass.component';
     AdminComponent,
     NgifComponent,
     NgforComponent,
-    NgclassComponent
+    NgclassComponent,
+    NgstyleComponent
   ],
   imports: [
     BrowserModule,

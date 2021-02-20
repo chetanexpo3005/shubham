@@ -4,6 +4,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { NgclassComponent } from './components/ngclass/ngclass.component';
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { NgifComponent } from './components/ngif/ngif.component';
+import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
 import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'ngclass',
     component: NgclassComponent
+  },
+  {
+    path: 'ngstyle',
+    component: NgstyleComponent
   }
 ];
 
