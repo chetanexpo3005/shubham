@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { NgclassComponent } from './components/ngclass/ngclass.component';
 import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
+import { PipeComponent } from './components/pipe/pipe.component';
+import { NaPipe } from './pipes/na.pipe';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
     NgifComponent,
     NgforComponent,
     NgclassComponent,
-    NgstyleComponent
+    NgstyleComponent,
+    PipeComponent,
+    NaPipe
   ],
   imports: [
     BrowserModule,

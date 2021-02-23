@@ -11,8 +11,8 @@ export class NgforComponent implements OnInit {
   stateList: string[];
   city: string;
   constructor() {
-    this.cityList = ['Nagpur','Pune', 'Mumbai'];
-    this.stateList = ['Mah','Mp','Goa','Guj'];
+    this.cityList = ['Nagpur', 'Pune', 'Mumbai', '', 'Warora'];
+    this.stateList = ['Mah', 'Mp', 'Goa', 'Guj'];
     this.city = '';
    }
 

@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-3  font-weight-bold">
+   Original value:- {{title}}
+  </div>
+  <div class="col-md-3">
+    titlecase:- {{title|titlecase}}
+  </div>
+  <div class="col-md-3">
+    lowercase:- {{title|lowercase}}
+  </div>
+  <div class="col-md-3">
+    uppercase:- {{title|uppercase}}
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col-md-3 font-weight-bold">
+   Original value:- {{todaydate}}
+  </div>
+  <div class="col-md-3">
+    date dd/MM/yyyy:- {{todaydate|date:'dd/MM/yyyy'}}
+  </div>
+  <div class="col-md-3">
+    date dd/MMM/yy:- {{todaydate|date:'dd-MMM-yy'}}
+  </div>
+  <div class="col-md-3">
+    date HH:mm:- {{todaydate|date:'HH:mm'}}
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col-md-3 font-weight-bold">
+    currency:"USD": -  {{6589.23 | currency:"USD"}}
+  </div>
+  <div class="col-md-3">
+    number: '3.4-4': -{{ 454.78787814 | number: '3.2-2' }}
+  </div>
+  <div class="col-md-3">
+    {{studentObj|json}}
+  </div>
+  <div class="col-md-3">
+    {{months|slice:2:5}}
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col-md-3 font-weight-bold">
+     <ul>
+       <li *ngFor="let month of months">{{month}}</li>
+     </ul>
+  </div>
+  <div class="col-md-3">
+    <ul>
+      <li *ngFor="let month of months">{{month|NA}}</li>
+    </ul>
+  </div>
+</div>
