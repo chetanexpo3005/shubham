@@ -1,0 +1,30 @@
+<div class="row pt-3">
+  <div class="col-md-12">
+    <form>
+      <div  class="row">
+        <div class="col-md-3">
+          <label>Company Name</label>
+          <input type="text" name="CompanyName" [(ngModel)]="Company.CompanyName" class="form-control"/>
+        </div>
+        <div class="col-md-3">
+
+        <button class="btn btn-success" (click)="saveCompany()"> Save Area</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col-md-12">
+    <table class="table table-bordered">
+      <tr>
+        <th>Company Id</th>
+        <th>Company Name</th>
+      </tr>
+      <tr *ngFor="let area of CompanyList;let i= index; let isFirst=first;let isLast=last">
+        <td>{{area.CompanyId}}</td>
+        <td>{{area.CompanyName}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -12,8 +12,9 @@ import { NgclassComponent } from './components/ngclass/ngclass.component';
 import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { NaPipe } from './pipes/na.pipe';
+import { AreaComponent } from './components/area/area.component';
 
-
+import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +25,14 @@ import { NaPipe } from './pipes/na.pipe';
     NgclassComponent,
     NgstyleComponent,
     PipeComponent,
-    NaPipe
+    NaPipe,
+    AreaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

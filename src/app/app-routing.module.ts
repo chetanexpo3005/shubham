@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
+import { AreaComponent } from './components/area/area.component';
 import { NgclassComponent } from './components/ngclass/ngclass.component';
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { NgifComponent } from './components/ngif/ngif.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'pipe',
     component: PipeComponent
+  },
+  {
+    path: 'area',
+    component: AreaComponent
   }
 ];
 
