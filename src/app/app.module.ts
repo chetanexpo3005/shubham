@@ -15,6 +15,7 @@ import { NaPipe } from './pipes/na.pipe';
 import { AreaComponent } from './components/area/area.component';
 
 import { HttpClientModule} from '@angular/common/http';
+import { AnVariableComponent } from './components/an-variable/an-variable.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { HttpClientModule} from '@angular/common/http';
     NgstyleComponent,
     PipeComponent,
     NaPipe,
-    AreaComponent
+    AreaComponent,
+    AnVariableComponent
   ],
   imports: [
     BrowserModule,

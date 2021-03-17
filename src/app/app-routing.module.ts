@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
+import { AnVariableComponent } from './components/an-variable/an-variable.component';
 import { AreaComponent } from './components/area/area.component';
 import { NgclassComponent } from './components/ngclass/ngclass.component';
 import { NgforComponent } from './components/ngfor/ngfor.component';
@@ -41,6 +42,11 @@ const routes: Routes = [
   {
     path: 'area',
     component: AreaComponent
+  }
+  ,
+  {
+    path: 'Vaiables',
+    component: AnVariableComponent
   }
 ];
 
