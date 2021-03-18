@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-4">
+    {{cityArray|json}}
+  </div>
+  <div class="col-md-4">
+    {{stateCityList|json}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2">
+    <input type="text" class="form-control" [(ngModel)]="city" />
+  </div>
+  <div class="col-md-2">
+    <input type="text" class="form-control" [(ngModel)]="output" />
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col-md-3">
+    <button class="btn btn-success" (click)="push()">Push</button>
+  </div>
+  <div class="col-md-3">
+    <button class="btn btn-success" (click)="Pop()">Pop</button>
+  </div>
+  <div class="col-md-3">
+    <button class="btn btn-success" (click)="Shift()">Shift</button>
+  </div>
+  <div class="col-md-3">
+    <button class="btn btn-success" (click)="unShift()">Un Shift</button>
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col-md-3">
+    <button class="btn btn-success " (click)="getSelected()">  Selected element</button>
+  </div>
+  <div class="col-md-2">
+    <button class="btn btn-success" (click)="foorLoop()">for Loop</button>
+  </div>
+  <div class="col-md-2">
+    <button class="btn btn-success" (click)="foorEachLoop()">for Each </button>
+  </div>
+  <div class="col-md-2">
+    <button class="btn btn-success" (click)="multpleFor()">multpleFor</button>
+  </div>
+  <div class="col-md-2">
+    <button class="btn btn-success" (click)="multpleForEach()">multple Foreach </button>
+  </div>
+</div>

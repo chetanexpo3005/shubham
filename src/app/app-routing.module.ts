@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
+import { AnArrayComponent } from './components/an-array/an-array.component';
 import { AnVariableComponent } from './components/an-variable/an-variable.component';
 import { AreaComponent } from './components/area/area.component';
 import { NgclassComponent } from './components/ngclass/ngclass.component';
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'Vaiables',
     component: AnVariableComponent
+  },
+  {
+    path: 'array',
+    component: AnArrayComponent
   }
 ];
 
