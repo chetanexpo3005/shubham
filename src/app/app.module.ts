@@ -17,6 +17,7 @@ import { AreaComponent } from './components/area/area.component';
 import { HttpClientModule} from '@angular/common/http';
 import { AnVariableComponent } from './components/an-variable/an-variable.component';
 import { AnArrayComponent } from './components/an-array/an-array.component';
+import { InlineComponent } from './components/inline/inline.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { AnArrayComponent } from './components/an-array/an-array.component';
     NaPipe,
     AreaComponent,
     AnVariableComponent,
-    AnArrayComponent
+    AnArrayComponent,
+    InlineComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,73 @@
+<h3 style="text-align: center;color:red;padding-top:20px">Loop Example</h3>
+<div class="row">
+  <div class="col-md-10 text-right">
+    <input type="text" placeholder="Enter Name" class="form-control"   [(ngModel)]="searchVal">
+</div>
+    <div class="col-md-2 text-right">
+        <input type="button" class="btn btn-info" value="Add" (click)="Add()">
+    </div>
+</div>
+
+<div class="row" style="padding-top:20px">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>One</th>
+                    <th>Two</th>
+                    <th>Three</th>
+                    <th>Four</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of StudentList">
+                    <td>
+                      <div *ngIf="item.isEdit">
+                        <input type="text" placeholder="Enter Name" class="form-control" [(ngModel)]="item.Name">
+                      </div>
+                      <div *ngIf="!item.isEdit">
+                        {{item.Name}}
+                      </div>
+                    </td>
+                    <td>
+                      <div *ngIf="item.isEdit">
+                        <input type="text" placeholder="Enter Name" class="form-control" [(ngModel)]="item.Contact">
+                      </div>
+                      <div *ngIf="!item.isEdit">
+                        {{item.Contact}}
+                      </div>
+                    </td>
+                    <td>
+                      <div *ngIf="item.isEdit">
+                        <input type="text" placeholder="Enter Name" class="form-control" [(ngModel)]="item.City">
+                      </div>
+                      <div *ngIf="!item.isEdit">
+                        {{item.City}}
+                      </div>
+                    </td>
+                    <td>
+                      <div *ngIf="item.isEdit">
+                        <input type="text" placeholder="Enter Name" class="form-control" [(ngModel)]="item.State">
+                      </div>
+                      <div *ngIf="!item.isEdit">
+                        {{item.State}}
+                      </div>
+                    </td>
+                    <td>
+                      <div *ngIf="!item.isEdit">
+                        <input type="button" class="btn btn-primary" value="Edit" (click)="Edit(item)">
+                        <input type="button" class="btn btn-danger" value="Edit" (click)="Delete(item)">
+                      </div>
+                      <div *ngIf="item.isEdit">
+                        <input type="button" class="btn btn-primary" [disabled]="!validate(item)" value="Update" (click)="Update(item)">
+                      <input type="button" class="btn btn-secondary" value="Cancel" (click)="Cancel(item)">
+                      </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
