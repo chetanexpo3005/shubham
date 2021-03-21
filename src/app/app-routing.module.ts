@@ -5,6 +5,7 @@ import { AnArrayComponent } from './components/an-array/an-array.component';
 import { AnVariableComponent } from './components/an-variable/an-variable.component';
 import { AreaComponent } from './components/area/area.component';
 import { InlineComponent } from './components/inline/inline.component';
+import { LocalStCrudComponent } from './components/local-st-crud/local-st-crud.component';
 import { NgclassComponent } from './components/ngclass/ngclass.component';
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { NgifComponent } from './components/ngif/ngif.component';
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: 'inline',
     component: InlineComponent
+  },
+  {
+    path: 'crud',
+    component: LocalStCrudComponent
   }
 ];
 

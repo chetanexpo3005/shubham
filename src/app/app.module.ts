@@ -18,6 +18,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { AnVariableComponent } from './components/an-variable/an-variable.component';
 import { AnArrayComponent } from './components/an-array/an-array.component';
 import { InlineComponent } from './components/inline/inline.component';
+import { LocalStCrudComponent } from './components/local-st-crud/local-st-crud.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { InlineComponent } from './components/inline/inline.component';
     AreaComponent,
     AnVariableComponent,
     AnArrayComponent,
-    InlineComponent
+    InlineComponent,
+    LocalStCrudComponent
   ],
   imports: [
     BrowserModule,
