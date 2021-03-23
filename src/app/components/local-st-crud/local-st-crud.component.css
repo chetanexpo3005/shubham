@@ -8,3 +8,9 @@
   font-weight: 700;
 
 }
+.expert {
+  color: red;
+}
+.noexpert {
+  color: green;
+}

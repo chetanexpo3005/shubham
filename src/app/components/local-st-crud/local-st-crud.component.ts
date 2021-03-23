@@ -8,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class LocalStCrudComponent implements OnInit {
 
 
-
+  isLoader: boolean;
   iEmployee: Employee;
   iEmployeeColl: Employee[];
   iEmployeeCollTemp: Employee[];
   search: string;
   constructor() {
+    this.isLoader = true;
     this.initModel();
     this.iEmployeeColl = [];
     this.iEmployeeCollTemp = [];
@@ -30,7 +31,7 @@ export class LocalStCrudComponent implements OnInit {
       id: 0,
       isCertification: false,
       lName: '',
-      skills: '',
+      rating: null,
       technology: ''
     };
   }
@@ -41,7 +42,15 @@ export class LocalStCrudComponent implements OnInit {
   loadGrid() {
     const fromStorage = JSON.parse(localStorage.getItem('empData'));
     if (fromStorage !== null) {
-      this.iEmployeeColl = fromStorage;
+      setTimeout(() => {
+        debugger;
+        this.isLoader = false;
+        this.iEmployeeColl = fromStorage;
+        setTimeout(() => {
+          const text2 = document.getElementById('tdName').innerHTML;
+          console.log(text2);
+        }, 2000);
+      }, 4000);
     }
   }
   getNewId() {
@@ -68,7 +77,7 @@ export class LocalStCrudComponent implements OnInit {
   filterByValue() {
     debugger;
     this.iEmployeeCollTemp = this.getOldData();
-    const data2 =  this.iEmployeeCollTemp.filter((data) =>  JSON.stringify(data).toLowerCase().indexOf(this.search.toLowerCase()) !== -1);
+    const data2 = this.iEmployeeCollTemp.filter((data) => JSON.stringify(data).toLowerCase().indexOf(this.search.toLowerCase()) !== -1);
     if (data2 !== null && data2 !== undefined) {
       this.iEmployeeColl = [];
       this.iEmployeeColl = data2;
@@ -118,6 +127,30 @@ export class LocalStCrudComponent implements OnInit {
       this.loadGrid();
     }
   }
+  getExpertise(rating) {
+    if (rating <= 3) {
+      return 'Beginner';
+    }
+    else if (rating > 3 && rating < 6) {
+      return 'Medium';
+    }
+    else if (rating >= 6 && rating < 8) {
+      return 'Senior';
+    }
+    else if (rating >= 8) {
+      return 'Expert';
+    }
+  }
+  getColorBYRating(rating) {
+    if (rating >= 8) {
+      return { 'background-color': 'green', 'color': '#ffff' };
+    }
+  }
+  getClassBYRating(rating) {
+    if (rating >= 8) {
+      return { 'background-color': 'green', 'color': '#ffff' };
+    }
+  }
 }
 
 export interface Employee {
@@ -130,6 +163,6 @@ export interface Employee {
   id: number;
   isCertification: boolean;
   lName: string;
-  skills: string;
+  rating: number;
   technology: string;
 }
