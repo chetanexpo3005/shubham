@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './components/admin/admin.component';
 import { AnArrayComponent } from './components/an-array/an-array.component';
+import { AnComponentComponent } from './components/an-component/an-component.component';
 import { AnVariableComponent } from './components/an-variable/an-variable.component';
 import { AreaComponent } from './components/area/area.component';
 import { InlineComponent } from './components/inline/inline.component';
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'crud',
     component: LocalStCrudComponent
+  },
+  {
+    path: 'component',
+    component: AnComponentComponent
   }
 ];
 

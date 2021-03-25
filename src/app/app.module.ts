@@ -19,6 +19,8 @@ import { AnVariableComponent } from './components/an-variable/an-variable.compon
 import { AnArrayComponent } from './components/an-array/an-array.component';
 import { InlineComponent } from './components/inline/inline.component';
 import { LocalStCrudComponent } from './components/local-st-crud/local-st-crud.component';
+import { AnComponentComponent } from './components/an-component/an-component.component';
+import { CardComponent } from './widgets/card/card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { LocalStCrudComponent } from './components/local-st-crud/local-st-crud.c
     AnVariableComponent,
     AnArrayComponent,
     InlineComponent,
-    LocalStCrudComponent
+    LocalStCrudComponent,
+    AnComponentComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

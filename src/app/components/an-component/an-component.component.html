@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-2">
+    {{rollNo}}
+  </div>
+  <div class="col-md-2">
+    <button class="btn btn-success" (click)="increment()">increment</button>
+  </div>
+</div>
+<div>
+  <p #namePara>We simply added the helloRef template reference to our hello component. Now let's change our code to access the component using its reference. Go back to the src/app/app.component.ts file and change accordingly:</p>
+</div>
+<div>
+  <!-- <app-admin></app-admin> -->
+</div>
+<div>
+  <p id="p2">We simply added the helloRef template reference to our hello component. Now let's change our code to access the component using its reference. Go back to the src/app/app.component.ts file and change accordingly:</p>
+</div>
+<!-- <div *ngFor="let city of cityList">
+  <app-admin></app-admin>
+</div> -->
+<div [ngTemplateOutlet]="msgTemp">
+
+</div>
+<ng-template #msgTemp>
+  Namaste!
+</ng-template>
+<app-card [Header]="headerName" [SubHeader]="rollNo"></app-card>
